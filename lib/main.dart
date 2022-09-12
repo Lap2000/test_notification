@@ -5,9 +5,9 @@ import 'package:flutter/material.dart';
 import 'home_page.dart';
 
 Future<void> backroundHandler(RemoteMessage message) async {
-  print(" This is message from background");
-  print(message.notification!.title);
-  print(message.notification!.body);
+  // print(" This is message from background");
+  // print(message.notification!.title);
+  // print(message.notification!.body);
 }
 
 void main() async {
