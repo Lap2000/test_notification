@@ -12,7 +12,11 @@ Future<void> backroundHandler(RemoteMessage message) async {
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
-  await Firebase.initializeApp();
+  if (Firebase.apps.isEmpty) {
+    await Firebase.initializeApp(
+      name: "MY-APP",
+    );
+  }
   //FirebaseMessaging.onBackgroundMessage(backroundHandler);
   runApp(const MyApp());
 }
